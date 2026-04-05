@@ -8,8 +8,8 @@ const projects = [
     description:
       "Full-stack booking platform with partner login, customer reservations, room management, admin approval workflow, and a reports dashboard for utilization insights.",
     techStack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    githubUrl: "https://github.com/yourusername/conference-booking",
-    liveUrl: "https://your-demo.example.com",
+    githubUrl: "https://github.com/Aman-Jaiman",
+    liveUrl: "",
     order: 0,
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     description:
       "Community portal to post lost items, browse listings, and claim items with secure backend APIs and role-aware flows.",
     techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB"],
-    githubUrl: "https://github.com/yourusername/lost-and-found",
+    githubUrl: "https://github.com/Aman-Jaiman",
     liveUrl: "",
     order: 1,
   },
@@ -26,7 +26,7 @@ const projects = [
     description:
       "LeetCode-style algorithm implementations in C++ covering arrays, graphs, DP, and trees — focused on clarity and complexity analysis.",
     techStack: ["C++", "Algorithms", "Data Structures"],
-    githubUrl: "https://github.com/yourusername/cp-solutions",
+    githubUrl: "https://github.com/Aman-Jaiman",
     liveUrl: "",
     order: 2,
   },

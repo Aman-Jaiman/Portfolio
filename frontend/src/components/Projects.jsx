@@ -11,7 +11,7 @@ const fallback = [
     description:
       "Partner login, customer booking, room management, approval workflow, and reports dashboard — full-stack system for scheduling shared spaces.",
     techStack: ["React", "Node.js", "Express", "MongoDB"],
-    githubUrl: "https://github.com/yourusername/conference-booking",
+    githubUrl: "https://github.com/Aman-Jaiman",
     liveUrl: "",
   },
   {
@@ -19,7 +19,7 @@ const fallback = [
     title: "Lost and Found Web Application",
     description: "Post lost items, claim listings, and RESTful backend APIs for a campus or community lost-and-found portal.",
     techStack: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/yourusername/lost-and-found",
+    githubUrl: "https://github.com/Aman-Jaiman",
     liveUrl: "",
   },
   {
@@ -27,7 +27,7 @@ const fallback = [
     title: "Coding Problem Solutions",
     description: "LeetCode-style C++ solutions with focus on time/space complexity and clean, readable implementations.",
     techStack: ["C++", "Algorithms", "Data Structures"],
-    githubUrl: "https://github.com/yourusername/cp-solutions",
+    githubUrl: "https://github.com/Aman-Jaiman",
     liveUrl: "",
   },
 ];
