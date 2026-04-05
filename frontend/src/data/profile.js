@@ -13,7 +13,7 @@ export const profile = {
   leetcode: "https://leetcode.com/u/Aman_Jaiman__/",
   leetcodeUsername: "Aman_Jaiman__",
   resumePath: "/resume.pdf",
-  profileImage: "/images/profile-photo.jpg",
+  profileImage: "/images/aman-kumar-sharma.jpg?v=20250406",
   profileImageFallback: "/favicon.svg",
   typingPhrases: ["C++ Developer", "Problem Solver", "Web Developer", "Computer Science Student"],
   summary:

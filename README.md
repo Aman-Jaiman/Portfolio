@@ -7,8 +7,8 @@ Full-stack personal portfolio for **Aman Kumar Sharma** (also known as **Aman Ja
 ### Home
 ![Home screenshot](./docs/screenshots/home.png)
 
-### Coding Profiles
-![Coding section screenshot](./docs/screenshots/coding.png)
+### Projects
+![Projects section screenshot](./docs/screenshots/projects.png)
 
 ### Contact
 ![Contact section screenshot](./docs/screenshots/contact.png)
@@ -16,7 +16,7 @@ Full-stack personal portfolio for **Aman Kumar Sharma** (also known as **Aman Ja
 ## Highlights
 
 - Responsive personal portfolio with hero, about, skills, projects, experience, coding profiles, and contact sections.
-- Replaceable profile photo stored at `frontend/public/images/profile-photo.jpg`.
+- Replaceable profile photo stored at `frontend/public/images/aman-kumar-sharma.jpg`.
 - Automatic fallback to `frontend/public/favicon.svg` if the profile photo is missing or fails to load.
 - Resume download support from `frontend/public/resume.pdf`.
 - GitHub stats, contribution graph, and live LeetCode progress card.
@@ -82,7 +82,7 @@ Frontend `.env` values:
 
 ## Customization
 
-- Replace the profile image by updating `frontend/public/images/profile-photo.jpg`.
+- Replace the profile image by updating `frontend/public/images/aman-kumar-sharma.jpg`.
 - Keep `frontend/public/favicon.svg` in place for the default avatar fallback.
 - Replace `frontend/public/resume.pdf` with the latest resume file when needed.
 - Update personal links in `frontend/src/data/profile.js`.

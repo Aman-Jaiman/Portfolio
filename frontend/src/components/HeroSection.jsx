@@ -77,7 +77,7 @@ export function HeroSection() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent p-5">
                 <p className="text-white font-display text-xl font-semibold">{profile.name}</p>
-                <p className="text-white/80 text-sm">Replace `/frontend/public/images/profile-photo.jpg` anytime.</p>
+                <p className="text-white/80 text-sm">Replace `/frontend/public/images/aman-kumar-sharma.jpg` anytime.</p>
               </div>
             </div>
           </div>
