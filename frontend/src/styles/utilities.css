@@ -1,0 +1,5 @@
+/* Shared utility overrides; main Tailwind entry is ../index.css */
+
+.text-balance {
+  text-wrap: balance;
+}

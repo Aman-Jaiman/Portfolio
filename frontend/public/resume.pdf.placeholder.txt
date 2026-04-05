@@ -1,0 +1,6 @@
+Replace this file with your real resume.
+
+1. Delete this .txt file.
+2. Add your PDF as: public/resume.pdf
+
+The site links to /resume.pdf from the hero "Resume" button.

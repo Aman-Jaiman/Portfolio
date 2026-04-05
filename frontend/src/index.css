@@ -1,0 +1,23 @@
+@import "./styles/utilities.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-950 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl shadow-slate-900/5;
+  }
+  .section-pad {
+    @apply px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-20 md:py-28;
+  }
+}
