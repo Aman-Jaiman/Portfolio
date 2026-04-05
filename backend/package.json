@@ -1,7 +1,7 @@
 {
   "name": "portfolio-backend",
   "version": "1.0.0",
-  "description": "Express API for Aman Jaiman portfolio",
+  "description": "Express API for Aman Kumar Sharma portfolio",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
-    "mongoose": "^8.7.0"
+    "mongoose": "^8.7.0",
+    "nodemailer": "^8.0.4"
   }
 }

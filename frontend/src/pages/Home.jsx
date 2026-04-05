@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { profile } from "../data/profile.js";
 import { Navbar } from "../components/Navbar.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { Hero } from "../components/Hero.jsx";
+import { SiteFooter } from "../components/SiteFooter.jsx";
+import { HeroSection } from "../components/HeroSection.jsx";
 import { About } from "../components/About.jsx";
 import { Skills } from "../components/Skills.jsx";
 import { Projects } from "../components/Projects.jsx";
 import { Experience } from "../components/Experience.jsx";
-import { GitHubStats } from "../components/GitHubStats.jsx";
+import { CodingProfiles } from "../components/CodingProfiles.jsx";
 import { Contact } from "../components/Contact.jsx";
 
 export default function Home() {
@@ -20,15 +20,15 @@ export default function Home() {
       </Helmet>
       <Navbar />
       <main>
-        <Hero />
+        <HeroSection />
         <About />
         <Skills />
         <Projects />
         <Experience />
-        <GitHubStats />
+        <CodingProfiles />
         <Contact />
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

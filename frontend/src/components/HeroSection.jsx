@@ -4,7 +4,7 @@ import { Download, MessageCircle, MapPin } from "lucide-react";
 import { profile } from "../data/profile.js";
 import { useTypewriter } from "../hooks/useTypewriter.js";
 
-export function Hero() {
+export function HeroSection() {
   const phrases = useMemo(() => profile.typingPhrases, []);
   const typed = useTypewriter(phrases, 75, 2200);
 
@@ -64,13 +64,20 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-500 to-violet-600 rounded-3xl blur-2xl opacity-30 scale-105" />
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl glass flex items-center justify-center border-2 border-white/40 dark:border-slate-600/50">
-              <div className="text-center p-6">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-brand-400 to-violet-500 flex items-center justify-center text-white font-display text-4xl font-bold shadow-inner">
-                  AJ
-                </div>
-                <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">Profile photo — replace with your image</p>
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-500 to-violet-600 rounded-[2rem] blur-2xl opacity-30 scale-105" />
+            <div className="relative w-72 h-80 sm:w-80 sm:h-[26rem] rounded-[2rem] glass border-2 border-white/40 dark:border-slate-600/50 overflow-hidden">
+              <img
+                src={profile.profileImage || profile.profileImageFallback}
+                alt={`${profile.name} profile`}
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = profile.profileImageFallback;
+                }}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent p-5">
+                <p className="text-white font-display text-xl font-semibold">{profile.name}</p>
+                <p className="text-white/80 text-sm">Replace `/frontend/public/images/profile-photo.jpg` anytime.</p>
               </div>
             </div>
           </div>

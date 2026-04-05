@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Mail, Github, Linkedin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { MapPin, Mail, Github, Linkedin, Instagram, Code2, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { profile } from "../data/profile.js";
 import { MotionSection } from "./MotionSection.jsx";
 import { api } from "../lib/api.js";
@@ -14,8 +14,8 @@ export function Contact() {
     setLoading(true);
     setStatus(null);
     try {
-      await api.post("/messages", form);
-      setStatus("ok");
+      const { data } = await api.post("/messages", form);
+      setStatus(data?.notificationStatus === "sent" ? "ok-email" : "ok-stored");
       setForm({ name: "", email: "", message: "" });
     } catch {
       setStatus("err");
@@ -28,7 +28,9 @@ export function Contact() {
     <MotionSection id="contact" className="section-pad bg-slate-100/50 dark:bg-slate-900/30">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">Contact</h2>
-        <p className="mt-3 text-slate-600 dark:text-slate-400">Send a message — stored in MongoDB when the API is running.</p>
+        <p className="mt-3 text-slate-600 dark:text-slate-400">
+          Send a message - it is saved in MongoDB and can notify me by email too.
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
@@ -56,6 +58,18 @@ export function Contact() {
                 <Linkedin className="w-5 h-5 shrink-0 text-brand-500" />
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-brand-600 dark:hover:text-brand-400 break-all">
                   LinkedIn
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Instagram className="w-5 h-5 shrink-0 text-brand-500" />
+                <a href={profile.instagram} target="_blank" rel="noreferrer" className="hover:text-brand-600 dark:hover:text-brand-400 break-all">
+                  Instagram
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Code2 className="w-5 h-5 shrink-0 text-brand-500" />
+                <a href={profile.leetcode} target="_blank" rel="noreferrer" className="hover:text-brand-600 dark:hover:text-brand-400 break-all">
+                  LeetCode
                 </a>
               </li>
             </ul>
@@ -105,16 +119,22 @@ export function Contact() {
             />
           </div>
 
-          {status === "ok" && (
+          {status === "ok-email" && (
             <p className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-sm">
               <CheckCircle className="w-4 h-4" />
-              Message sent. Thank you!
+              Message sent. It was also forwarded to my email.
+            </p>
+          )}
+          {status === "ok-stored" && (
+            <p className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-sm">
+              <CheckCircle className="w-4 h-4" />
+              Message sent and saved successfully.
             </p>
           )}
           {status === "err" && (
             <p className="flex items-center gap-2 text-red-600 dark:text-red-400 text-sm">
               <AlertCircle className="w-4 h-4" />
-              Could not send. Is the backend running with MongoDB?
+              Could not send. Check that the backend is running and MongoDB is connected.
             </p>
           )}
 
@@ -123,7 +143,9 @@ export function Contact() {
             disabled={loading}
             className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 disabled:opacity-60 text-white font-medium shadow-lg shadow-brand-500/25 transition-all"
           >
-            {loading ? "Sending…" : (
+            {loading ? (
+              "Sending..."
+            ) : (
               <>
                 <Send className="w-4 h-4" />
                 Send message

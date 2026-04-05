@@ -1,6 +1,6 @@
 # Portfolio — Setup, Schema & Deployment
 
-Full-stack portfolio for **Aman Jaiman**: React + Tailwind (frontend), Node + Express + MongoDB (backend).
+Full-stack portfolio for **Aman Kumar Sharma** (also known as **Aman Jaiman**): React + Tailwind (frontend), Node + Express + MongoDB (backend).
 
 ## Folder structure
 
@@ -66,13 +66,15 @@ Portfolio/
 ```bash
 cd backend
 cp .env.example .env
-# Edit .env: MONGODB_URI, ADMIN_TOKEN, CORS_ORIGIN, PORT
+# Edit .env: MONGODB_URI, ADMIN_TOKEN, CORS_ORIGIN, PORT, SMTP_* (for contact email notifications)
 npm install
 npm run seed    # optional: loads sample projects (wipes existing projects)
 npm run dev     # or npm start
 ```
 
 API runs at `http://localhost:5000` by default.
+
+For Gmail notifications, use an App Password in `SMTP_PASS` after enabling 2-Step Verification on the Gmail account.
 
 - **Public:** `GET /api/projects`, `POST /api/messages`, `GET /api/health`
 - **Admin (header `Authorization: Bearer <ADMIN_TOKEN>`):**  
