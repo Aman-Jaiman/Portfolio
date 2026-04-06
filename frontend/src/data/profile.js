@@ -4,7 +4,6 @@ export const profile = {
   location: "Dausa, Rajasthan, India",
   college: "Swami Keshvanand Institute of Technology (SKIT), Jaipur",
   branch: "Computer Science Engineering",
-  height: "6 feet",
   email: "amanjaiman0010@gmail.com",
   linkedin: "https://www.linkedin.com/in/aman-sharma-67b517376/",
   github: "https://github.com/Aman-Jaiman",
@@ -13,7 +12,7 @@ export const profile = {
   leetcode: "https://leetcode.com/u/Aman_Jaiman__/",
   leetcodeUsername: "Aman_Jaiman__",
   resumePath: "/resume.pdf",
-  profileImage: "/images/aman-kumar-sharma.jpg?v=20250406",
+  profileImage: "/images/profile-photo.jpg?v=20250406",
   profileImageFallback: "/favicon.svg",
   typingPhrases: ["C++ Developer", "Problem Solver", "Web Developer", "Computer Science Student"],
   summary:
