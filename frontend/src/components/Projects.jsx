@@ -71,7 +71,7 @@ export function Projects() {
           Selected work — loaded from the API when MongoDB is connected.
           {usedFallback && (
             <span className="block mt-2 text-amber-600 dark:text-amber-400 text-sm">
-              Showing sample data. Run the backend and seed script to use your database.
+              {/* Showing sample data. Run the backend and seed script to use your database. */}
             </span>
           )}
         </p>
